@@ -8,7 +8,7 @@
             "name": "(gdb) Запустить",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/debug/udp_test.exe",
+            "program": "${workspaceFolder}/../build-udp_test-MinGw-Debug/debug/udp_test.exe",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
