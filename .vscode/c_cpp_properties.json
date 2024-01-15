@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "win64",
+            "defines": [""],
+            "includePath": [
+                "${env:QtMingw}/include",
+                "${env:QtMingw}/include/QtWidgets",
+                "${env:QtMingw}/include/QtCore",
+                "${env:QtMingw}/include/QtGui",
+                "${env:QtMingw}/include/QtCharts",
+                "${env:QtMingw}/include/QtSerialPort"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe"
+
+        }
+    ],
+    "version": 4
+}
