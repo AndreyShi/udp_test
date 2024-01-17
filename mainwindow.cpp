@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(_udp, SIGNAL(finished()), handlerThread, SLOT(quit()));
     connect(_udp, SIGNAL(finished()), _udp, SLOT(deleteLater()));
     connect(handlerThread, SIGNAL(finished()), handlerThread, SLOT(deleteLater()));
-    int port=12000; //udp port
+    int port=10000; //udp port
     _udp->connectToServer(port);
     _udp->moveToThread(handlerThread); // объект помещается в поток
     handlerThread
@@ -51,12 +51,13 @@ void MainWindow::timerExept(void)
 void MainWindow::on_pushButton_pressed()
 {
     simple_conf.conf1=ui->lineEdit->text().toInt();
+    buff_tosend = ui->lineEdit->text().toInt();
     send_conf();
 }
 
 void MainWindow::send_conf(void)
 {
     if (cmd_en == 1)
-        _udp->send_pack((char *) &simple_conf, sizeof(simple_conf));
+    {_udp->send_pack((char *) &buff_tosend, sizeof(buff_tosend));}
 }
 

@@ -36,7 +36,7 @@ class ThreadUdp : public QObject {
 public:
     ThreadUdp(int ip);
     ~ThreadUdp();
-    void connectToServer(quint16 _port = 12000);
+    void connectToServer(quint16 _port = 10000);
     //	void run();
     void stop();
     int get(udp_data_type* data);

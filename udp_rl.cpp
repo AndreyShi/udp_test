@@ -19,7 +19,7 @@
 ThreadUdp::ThreadUdp(int ip)
 {
     ip4 = ip;
-    port = 12000;
+    port = 10000;
     usedBufSpace = 0;
     readPos = 0;
     writePos = 0;
