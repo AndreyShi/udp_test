@@ -36,6 +36,15 @@ MainWindow::~MainWindow()
 //timer  10mS
 void MainWindow::timerExept(void)
 {
+    //polling board every 1 sec
+    static int time1sec;
+    time1sec += 10;
+    if(time1sec >= 1000)
+    {
+        _udp->send_pack((char*)"\x00\x00\x00\x00", 4);
+        time1sec = 0;
+    }
+
     udp_data_type data;
     int count = 0;  //сколько принято посылок
     while (_udp->get(&data) != -1) {
