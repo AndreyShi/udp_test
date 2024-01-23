@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>565</width>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,14 +50,53 @@
      <string>TextLabel</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_trackStop">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>trackStop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_trackFwd">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>250</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>trackFwd</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_trackRev">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>trackRev</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>25</height>
+     <width>565</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

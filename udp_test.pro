@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    udp_rl.cpp
+    udp_rl.cpp \
+    track.cpp
 
 HEADERS += \
     mainwindow.h \
-    udp_rl.h
+    udp_rl.h \
+    track.h
 
 FORMS += \
     mainwindow.ui

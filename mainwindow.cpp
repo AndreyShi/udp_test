@@ -8,8 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     cmd_en = 0;
     ui->setupUi(this);
     int ip=11; //192.168.1.xxx
-    handlerThread
-        = new QThread(); // создается ни с чем не связанный объект потока (котоырй пока что вообще не работает)
+    handlerThread = new QThread(); // создается ни с чем не связанный объект потока (котоырй пока что вообще не работает)
     _udp = new ThreadUdp(ip); // создается объект, который поместится в поток
     //connect(_udp, SIGNAL(errorUdp(QString)), this, SLOT(get_error(QString)));
     connect(handlerThread, SIGNAL(started()), _udp, SLOT(process()));
@@ -19,8 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     int port=10000; //udp port
     _udp->connectToServer(port);
     _udp->moveToThread(handlerThread); // объект помещается в поток
-    handlerThread
-        ->start(); // поток запускается (теперь наш объект обрабатывает всякие сообщения в отдельном потоке)
+    handlerThread->start(); // поток запускается (теперь наш объект обрабатывает всякие сообщения в отдельном потоке)
 
     //rx timer
     connect(&timerRead, SIGNAL(timeout()), this, SLOT(timerExept()));
