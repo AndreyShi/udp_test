@@ -1,6 +1,11 @@
-#include <QObject>
+#include "udp_rl.h"
 
-class Track : public QObject {
-    Q_OBJECT
-
+class Track {
+public:
+    Track(ThreadUdp* udp);
+    void stop();
+    void moveFwd();
+    void moveRev();
+private:
+    ThreadUdp* _udp;
 };
