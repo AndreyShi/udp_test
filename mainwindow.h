@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <QThread>
 #include "udp_rl.h"
+#include "track.h"
+
 typedef struct
 {
     uint16_t		conf1;
@@ -27,9 +29,13 @@ public:
 private slots:
     void on_pushButton_pressed();
     void timerExept(void);
+    void pb_trackFwd(void);
+    void pb_trackRev(void);
+    void pb_trackStop(void);
 private:
     Ui::MainWindow *ui;
     ThreadUdp* _udp;
+    Track* ershik;
     QThread *handlerThread;
     QTimer timerRead;
     int cmd_en;

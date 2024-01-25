@@ -79,7 +79,9 @@ int ThreadUdp::get(udp_data_type *data)
 
 void ThreadUdp::send_pack(char *buf, int size)
 {
+    mutexBuf.lock();
     udpSocket->writeDatagram(buf, size, currentIP, port);
+    mutexBuf.unlock();
 }
 
 
