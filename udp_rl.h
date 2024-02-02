@@ -25,8 +25,10 @@ typedef struct {
     int data3;
 } udp_data_type;
 
-
-
+typedef struct {
+	uint32_t pac_type;
+	int8_t data[1024 - 4];	//������ � ����������
+} pack_type;
 
 
 
@@ -52,6 +54,7 @@ public:
     QUdpSocket* udpSocket;
     int counter;
     int rx;
+    pack_type udp_Pack;
 
 public slots:
     void process();

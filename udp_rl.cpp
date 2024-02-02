@@ -102,6 +102,11 @@ void ThreadUdp::read_sock(void){
                 dataBuf[writePos % BUF_SIZE] = *udp_packet;
                 writePos++;
                 mutexBuf.unlock();
+            }else if(size == sizeof(pack_type))
+            {
+                mutexBuf.lock();
+                memcpy(&udp_Pack,rxData,sizeof(pack_type));
+                mutexBuf.unlock();
             }
         }
     }

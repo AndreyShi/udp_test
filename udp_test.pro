@@ -17,7 +17,8 @@ SOURCES += \
 HEADERS += \
     mainwindow.h \
     udp_rl.h \
-    track.h
+    track.h \
+    board_data_type.h \
 
 FORMS += \
     mainwindow.ui

@@ -1,10 +1,7 @@
+#ifndef TRACK_H_
+#define TRACK_H_
 #include "udp_rl.h"
 #include "board_data_type.h"
-
-typedef struct {
-	uint32_t pac_type;
-	int8_t data[1024 - 4];	//������ � ����������
-} pack_type;
 
 class Track {
 public:
@@ -12,6 +9,11 @@ public:
     void stop();
     void moveFwd();
     void moveRev();
+    void recieve_data();
+    void poll();
+    
+    track_data_type data;
 private:
     ThreadUdp* _udp;
 };
+#endif

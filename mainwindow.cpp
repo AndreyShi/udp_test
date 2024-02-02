@@ -40,9 +40,13 @@ void MainWindow::timerExept(void)
     //polling board every 1 sec
     static int time1sec;
     time1sec += 10;
-    if(time1sec >= 1000)
+    if(time1sec == 500)
     {
-        _udp->send_pack((char*)"\x00\x00\x00\x00", 4);
+        ershik->recieve_data();
+    }
+    else if(time1sec >= 1000)
+    {
+        ershik->poll();
         time1sec = 0;
     }
 
