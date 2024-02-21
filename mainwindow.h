@@ -42,5 +42,6 @@ private:
     conf_t simple_conf;
     uint32_t buff_tosend;
     void send_conf(void);
+    void updata_data(void);
 };
 #endif // MAINWINDOW_H

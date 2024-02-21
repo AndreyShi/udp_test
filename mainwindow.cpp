@@ -41,9 +41,10 @@ void MainWindow::timerExept(void)
     static int time1sec;
     time1sec += 10;
     if(time1sec == 500)
-    {
-        ershik->recieve_data();
-    }
+        { 
+            ershik->recieve_data();
+            updata_data();
+        }
     else if(time1sec >= 1000)
     {
         ershik->poll();
@@ -56,7 +57,7 @@ void MainWindow::timerExept(void)
         count++;
     }
     if (count == 0)
-        return;
+        { return;}
     QString str=QString::number(data.data1); //число в строку
     ui->label->setText(str);
 }
@@ -73,7 +74,12 @@ void MainWindow::on_pushButton_pressed()
 void MainWindow::send_conf(void)
 {
     if (cmd_en == 1)
-    {_udp->send_pack((char *) &buff_tosend, sizeof(buff_tosend));}
+        {_udp->send_pack((char *) &buff_tosend, sizeof(buff_tosend));}
+}
+
+void MainWindow::updata_data(void)
+{
+     ui->label_Vin->setText(QString::number(ershik->data.Vin));
 }
 
 void MainWindow::pb_trackFwd(void)
