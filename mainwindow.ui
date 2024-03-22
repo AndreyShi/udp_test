@@ -53,7 +53,7 @@
    <widget class="QPushButton" name="pushButton_trackStop">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>470</x>
       <y>220</y>
       <width>75</width>
       <height>23</height>
@@ -66,7 +66,7 @@
    <widget class="QPushButton" name="pushButton_trackFwd">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>470</x>
       <y>250</y>
       <width>75</width>
       <height>23</height>
@@ -79,7 +79,7 @@
    <widget class="QPushButton" name="pushButton_trackRev">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>470</x>
       <y>280</y>
       <width>75</width>
       <height>23</height>
@@ -89,20 +89,14 @@
      <string>trackRev</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Vin">
+   <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>20</y>
-      <width>56</width>
-      <height>19</height>
+      <y>10</y>
+      <width>361</width>
+      <height>301</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>Vin</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -112,7 +106,7 @@
      <x>0</x>
      <y>0</y>
      <width>565</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

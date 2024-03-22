@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QThread>
+#include <QScrollBar>
 #include "udp_rl.h"
 #include "track.h"
 

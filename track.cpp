@@ -23,7 +23,7 @@ void Track::moveRev()
 
 void Track::recieve_data()
 {
-    memcpy(&data,&_udp->udp_Pack,sizeof(track_data_type));
+    memcpy(&data,&_udp->udp_Pack.data,sizeof(track_data_type));
 }
 
 void Track::poll()
