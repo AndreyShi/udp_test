@@ -79,10 +79,11 @@ void MainWindow::send_conf(void)
 
 void MainWindow::updata_data(void)
 {
-
      QScrollBar *sb = ui->textEdit->verticalScrollBar();
-     int save_sc = sb->value();
      QString dummy;
+
+     ui->label->setText(dummy.sprintf("PacketCounter: %d",_udp->PacketCounter));
+     int save_sc = sb->value();
      ui->textEdit->setText(dummy.sprintf(
     "time: %d\n"
     "Vin: %.3f\n"

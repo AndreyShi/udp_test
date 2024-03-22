@@ -90,7 +90,7 @@ void ThreadUdp::read_sock(void){
 
     quint16 localPort = 0;
     quint8 rxData[8000];
-
+    PacketCounter++;
     if (udpSocket->hasPendingDatagrams() == true) {
         size = udpSocket->readDatagram((char *) rxData, 2048, &currentIP, &localPort);
         if ((localPort != port) && (localPort != port + 1)) {

@@ -49,7 +49,7 @@ public:
     int byteCount;
     int ErrorCount;
     int firstError;
-    int PacketNum;
+    int PacketCounter;
     int firstPacket;
     QUdpSocket* udpSocket;
     int counter;
