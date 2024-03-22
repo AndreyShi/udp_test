@@ -86,74 +86,97 @@ void MainWindow::updata_data(void)
      int save_sc = sb->value();
      ui->textEdit->setText(dummy.sprintf(
     "time: %d\n"
-    "Vin: %.3f\n"
+    "Vin_min: %.3f\n"
+
     "gX: %.3f\n"
     "gY: %.3f\n"
     "gZ: %.3f\n"
-    "sensorState[0]: %d\n"
-    "sensorState[1]: %d\n"
-    "sensorState[2]: %d\n"
-    "sensorState[3]: %d\n"
-    "scanState: %d\n"
+
+    "trackState[0]: %d\n"
+    "trackState[1]: %d\n"
+    "trackState[2]: %d\n"
+    "BoardState: %d\n"
+
+    "[0]HallTicks: %d\n"
     "[0]cur: %d\n"
     "[0]curLimit %d\n"
     "[0]step: %d\n"
-    "[0]res: %d\n"
+    "[0]pwmLimitFlag: %d\n"
+
+    "[1]HallTicks: %d\n"
     "[1]cur: %d\n"
     "[1]curLimit: %d\n"
     "[1]step: %d\n"
-    "[1]res: %d\n"
+    "[1]pwmLimitFlag: %d\n"
+
+    "[2]HallTicks: %d\n"
     "[2]cur: %d\n"
     "[2]curLimit: %d\n"
     "[2]step: %d\n"
-    "[2]res: %d\n"
+    "[2]pwmLimitFlag: %d\n"
+
     "scan_speed: %d\n"
     "move_speed: %d\n"
     "scan_step: %d\n"
     "acs: %d\n"
+
     "kSpeed[0]: %.3f\n"
     "kSpeed[1]: %.3f\n"
     "kSpeed[2]: %.3f\n"
+
     "kAcs[0]: %.3f\n"
     "kAcs[1]: %.3f\n"
     "kAcs[2]: %.3f\n"
+
     "cur_limit_mA[0]: %d\n"
     "cur_limit_mA[1]: %d\n"
     "cur_limit_mA[2]: %d\n"
+
     ,ershik->data.time
-    ,ershik->data.Vin
-    ,ershik->data.gX
+    ,ershik->data.Vin_min
+
+    ,ershik->data.gX                              
     ,ershik->data.gY
     ,ershik->data.gZ
-    ,ershik->data.sensorState[0]
-    ,ershik->data.sensorState[1]
-    ,ershik->data.sensorState[2]
-    ,ershik->data.sensorState[3]
-    ,ershik->data.scanState
+
+    ,ershik->data.trackState[0]
+    ,ershik->data.trackState[1]
+    ,ershik->data.trackState[2]
+    ,ershik->data.BoardState
+
+    ,ershik->data.reg[0].HallTicks
     ,ershik->data.reg[0].cur
-    ,ershik->data.reg[0].curLimit
+    ,ershik->data.reg[0].curLimit           
     ,ershik->data.reg[0].step
-    ,ershik->data.reg[0].res
+    ,ershik->data.reg[0].pwmLimitFlag
+
+    ,ershik->data.reg[1].HallTicks
     ,ershik->data.reg[1].cur
     ,ershik->data.reg[1].curLimit
-    ,ershik->data.reg[1].step
-    ,ershik->data.reg[1].res
-    ,ershik->data.reg[2].cur
+    ,ershik->data.reg[1].step             
+    ,ershik->data.reg[1].pwmLimitFlag
+
+    ,ershik->data.reg[2].HallTicks
+    ,ershik->data.reg[2].cur           
     ,ershik->data.reg[2].curLimit
     ,ershik->data.reg[2].step
-    ,ershik->data.reg[2].res
+    ,ershik->data.reg[2].pwmLimitFlag
+
     ,ershik->data.coef.scan_speed
     ,ershik->data.coef.move_speed
-    ,ershik->data.coef.scan_step
+    ,ershik->data.coef.scan_step           
     ,ershik->data.coef.acs
+
     ,ershik->data.coef.kSpeed[0]
-    ,ershik->data.coef.kSpeed[1]
+    ,ershik->data.coef.kSpeed[1]          
     ,ershik->data.coef.kSpeed[2]
+
     ,ershik->data.coef.kAcs[0]
-    ,ershik->data.coef.kAcs[1]
+    ,ershik->data.coef.kAcs[1]        
     ,ershik->data.coef.kAcs[2]
+
     ,ershik->data.coef.cur_limit_mA[0]
-    ,ershik->data.coef.cur_limit_mA[1]
+    ,ershik->data.coef.cur_limit_mA[1]           
     ,ershik->data.coef.cur_limit_mA[2]
     ));
    sb->setValue(save_sc);
