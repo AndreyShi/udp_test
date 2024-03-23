@@ -25,6 +25,7 @@ ThreadUdp::ThreadUdp(int ip)
     writePos = 0;
     dataBuf = new udp_data_type[BUF_SIZE];
     rx = 0;
+    PacketCounter = 0;
 }
 
 ThreadUdp::~ThreadUdp()
