@@ -40,7 +40,7 @@ void MainWindow::timerExept(void)
     //polling board every 1 sec
     static int time1sec;
     time1sec += 10;
-    if(time1sec == 500)
+    if(time1sec % 100 == 0)
         { 
             ershik->recieve_data();
             updata_data();
