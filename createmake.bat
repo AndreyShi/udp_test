@@ -1,0 +1,1 @@
+qmake -spec win32-g++ udp_test.pro

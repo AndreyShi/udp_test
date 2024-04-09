@@ -1,1 +1,6 @@
 udp_test.pro.user
+debug
+release
+.qmake.stash
+Makefile*
+ui_mainwindow.h
