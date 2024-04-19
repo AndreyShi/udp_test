@@ -33,6 +33,11 @@ private slots:
     void pb_trackFwd(void);
     void pb_trackRev(void);
     void pb_trackStop(void);
+    
+    void pb_track_pwr1(void);
+    void pb_track_pwr2(void);
+    void pb_track_pwr3(void);
+
 private:
     Ui::MainWindow *ui;
     ThreadUdp* _udp;

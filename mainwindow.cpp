@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "QMessageBox"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,6 +19,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_trackFwd,&QPushButton::clicked,this,&MainWindow::pb_trackFwd);
     connect(ui->pushButton_trackRev,&QPushButton::clicked,this,&MainWindow::pb_trackRev);
     connect(ui->pushButton_trackStop,&QPushButton::clicked,this,&MainWindow::pb_trackStop);
+
+    connect(ui->pb_track_pwr1,&QPushButton::clicked,this,&MainWindow::pb_track_pwr1);
+    connect(ui->pb_track_pwr2,&QPushButton::clicked,this,&MainWindow::pb_track_pwr2);
+    connect(ui->pb_track_pwr3,&QPushButton::clicked,this,&MainWindow::pb_track_pwr3);
+
     int port=10000; //udp port
     _udp->connectToServer(port);
     _udp->moveToThread(handlerThread); // объект помещается в поток
@@ -193,5 +199,25 @@ void MainWindow::pb_trackRev(void)
 void MainWindow::pb_trackStop(void)
 {
     ershik->stop();
+}
+
+void MainWindow::pb_track_pwr1(void)
+{
+    ershik->track_pwr1();
+    /*QMessageBox::warning(this, tr("My Application"),
+                               tr("The document has been modified.\n"
+                                  "Do you want to save your changes?"),
+                               QMessageBox::Save | QMessageBox::Discard
+                               | QMessageBox::Cancel,
+                               QMessageBox::Save);
+                               */
+}
+void MainWindow::pb_track_pwr2(void)
+{
+    ershik->track_pwr2();
+}
+void MainWindow::pb_track_pwr3(void)
+{
+    ershik->track_pwr3();
 }
 

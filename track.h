@@ -11,9 +11,13 @@ public:
     void moveRev();
     void recieve_data();
     void poll();
-    
+
+    void track_pwr1();
+    void track_pwr2();
+    void track_pwr3();
     track_data_type data;
 private:
     ThreadUdp* _udp;
+    udp_motor_pack_type tmp_motor;
 };
 #endif
