@@ -204,13 +204,6 @@ void MainWindow::pb_trackStop(void)
 void MainWindow::pb_track_pwr1(void)
 {
     ershik->track_pwr1();
-    /*QMessageBox::warning(this, tr("My Application"),
-                               tr("The document has been modified.\n"
-                                  "Do you want to save your changes?"),
-                               QMessageBox::Save | QMessageBox::Discard
-                               | QMessageBox::Cancel,
-                               QMessageBox::Save);
-                               */
 }
 void MainWindow::pb_track_pwr2(void)
 {
