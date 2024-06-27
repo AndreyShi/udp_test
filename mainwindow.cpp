@@ -186,6 +186,111 @@ void MainWindow::updata_data(void)
     ,ershik->data.coef.cur_limit_mA[2]
     ));
    sb->setValue(save_sc);
+
+
+   ui->textEdit_300->setText(dummy.sprintf(
+    "ampl[0]: %.3f\n"
+    "ampl[1]: %.3f\n"
+    "ampl[2]: %.3f\n"
+    "ampl[3]: %.3f\n"
+    "ampl[4]: %.3f\n"
+    "ampl[5]: %.3f\n"
+    "ampl[6]: %.3f\n"
+    "ampl[7]: %.3f\n"
+    "ampl[8]: %.3f\n"
+    "ampl[9]: %.3f\n"
+    "ampl[10]: %.3f\n"
+    "ampl[11]: %.3f\n"
+    "ampl[12]: %.3f\n"
+    "ampl[13]: %.3f\n"
+    "ampl[14]: %.3f\n"
+    "ampl[15]: %.3f\n"
+    "ampl[16]: %.3f\n"
+    "ampl[17]: %.3f\n"
+    "ampl[18]: %.3f\n"
+    "ampl[19]: %.3f\n"
+    "ampl[20]: %.3f\n"
+    "ampl[21]: %.3f\n"
+    "ampl[22]: %.3f\n"
+    "ampl[23]: %.3f\n"
+
+    ,ershik->data.ampl[0][0]
+    ,ershik->data.ampl[1][0]
+    ,ershik->data.ampl[2][0]
+    ,ershik->data.ampl[3][0]
+    ,ershik->data.ampl[4][0]
+    ,ershik->data.ampl[5][0]
+    ,ershik->data.ampl[6][0]
+    ,ershik->data.ampl[7][0]
+    ,ershik->data.ampl[8][0]
+    ,ershik->data.ampl[9][0]
+    ,ershik->data.ampl[10][0]
+    ,ershik->data.ampl[11][0]
+    ,ershik->data.ampl[12][0]
+    ,ershik->data.ampl[13][0]
+    ,ershik->data.ampl[14][0]
+    ,ershik->data.ampl[15][0]
+    ,ershik->data.ampl[16][0]
+    ,ershik->data.ampl[17][0]
+    ,ershik->data.ampl[18][0]
+    ,ershik->data.ampl[19][0]
+    ,ershik->data.ampl[20][0]
+    ,ershik->data.ampl[21][0]
+    ,ershik->data.ampl[22][0]
+    ,ershik->data.ampl[23][0]
+   ));
+
+   ui->textEdit_600->setText(dummy.sprintf(
+    "ampl[0]: %.3f\n"
+    "ampl[1]: %.3f\n"
+    "ampl[2]: %.3f\n"
+    "ampl[3]: %.3f\n"
+    "ampl[4]: %.3f\n"
+    "ampl[5]: %.3f\n"
+    "ampl[6]: %.3f\n"
+    "ampl[7]: %.3f\n"
+    "ampl[8]: %.3f\n"
+    "ampl[9]: %.3f\n"
+    "ampl[10]: %.3f\n"
+    "ampl[11]: %.3f\n"
+    "ampl[12]: %.3f\n"
+    "ampl[13]: %.3f\n"
+    "ampl[14]: %.3f\n"
+    "ampl[15]: %.3f\n"
+    "ampl[16]: %.3f\n"
+    "ampl[17]: %.3f\n"
+    "ampl[18]: %.3f\n"
+    "ampl[19]: %.3f\n"
+    "ampl[20]: %.3f\n"
+    "ampl[21]: %.3f\n"
+    "ampl[22]: %.3f\n"
+    "ampl[23]: %.3f\n"
+
+    ,ershik->data.ampl[0][1]
+    ,ershik->data.ampl[1][1]
+    ,ershik->data.ampl[2][1]
+    ,ershik->data.ampl[3][1]
+    ,ershik->data.ampl[4][1]
+    ,ershik->data.ampl[5][1]
+    ,ershik->data.ampl[6][1]
+    ,ershik->data.ampl[7][1]
+    ,ershik->data.ampl[8][1]
+    ,ershik->data.ampl[9][1]
+    ,ershik->data.ampl[10][1]
+    ,ershik->data.ampl[11][1]
+    ,ershik->data.ampl[12][1]
+    ,ershik->data.ampl[13][1]
+    ,ershik->data.ampl[14][1]
+    ,ershik->data.ampl[15][1]
+    ,ershik->data.ampl[16][1]
+    ,ershik->data.ampl[17][1]
+    ,ershik->data.ampl[18][1]
+    ,ershik->data.ampl[19][1]
+    ,ershik->data.ampl[20][1]
+    ,ershik->data.ampl[21][1]
+    ,ershik->data.ampl[22][1]
+    ,ershik->data.ampl[23][1]
+   ));
 }
 
 void MainWindow::pb_trackFwd(void)
