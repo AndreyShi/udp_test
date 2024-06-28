@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>565</width>
+    <width>675</width>
     <height>596</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>540</x>
       <y>20</y>
       <width>113</width>
       <height>20</height>
@@ -27,7 +27,7 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>580</x>
       <y>50</y>
       <width>75</width>
       <height>23</height>
@@ -40,9 +40,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>90</y>
-      <width>101</width>
+      <x>470</x>
+      <y>440</y>
+      <width>171</width>
       <height>20</height>
      </rect>
     </property>
@@ -53,7 +53,7 @@
    <widget class="QPushButton" name="pushButton_trackStop">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>570</x>
       <y>220</y>
       <width>75</width>
       <height>23</height>
@@ -66,7 +66,7 @@
    <widget class="QPushButton" name="pushButton_trackFwd">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>570</x>
       <y>250</y>
       <width>75</width>
       <height>23</height>
@@ -79,7 +79,7 @@
    <widget class="QPushButton" name="pushButton_trackRev">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>570</x>
       <y>280</y>
       <width>75</width>
       <height>23</height>
@@ -102,7 +102,7 @@
    <widget class="QPushButton" name="pb_track_pwr1">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>570</x>
       <y>340</y>
       <width>75</width>
       <height>23</height>
@@ -115,7 +115,7 @@
    <widget class="QPushButton" name="pb_track_pwr2">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>570</x>
       <y>370</y>
       <width>75</width>
       <height>23</height>
@@ -128,7 +128,7 @@
    <widget class="QPushButton" name="pb_track_pwr3">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>570</x>
       <y>400</y>
       <width>75</width>
       <height>23</height>
@@ -143,7 +143,7 @@
      <rect>
       <x>180</x>
       <y>10</y>
-      <width>111</width>
+      <width>161</width>
       <height>371</height>
      </rect>
     </property>
@@ -151,9 +151,9 @@
    <widget class="QTextEdit" name="textEdit_600">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>370</x>
       <y>10</y>
-      <width>104</width>
+      <width>161</width>
       <height>371</height>
      </rect>
     </property>
@@ -164,7 +164,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>565</width>
+     <width>675</width>
      <height>21</height>
     </rect>
    </property>

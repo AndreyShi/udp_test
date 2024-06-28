@@ -85,6 +85,14 @@ void MainWindow::send_conf(void)
 
 void MainWindow::updata_data(void)
 {
+    if(ershik->type == 0 )
+    {;}
+    else if(ershik->type == 1)
+    {this->setWindowTitle("MainWindow Ershik");}
+    else if(ershik->type == 2)
+    {this->setWindowTitle("MainWindow ControlSwitch");}
+
+
      QScrollBar *sb = ui->textEdit->verticalScrollBar();
      QString dummy;
 
@@ -187,18 +195,32 @@ void MainWindow::updata_data(void)
     ));
    sb->setValue(save_sc);
 
+    /*  ui->textEdit_calib_status->clear();
+    for(int c =0 ; c < 2;c++){ 
+        ui->textEdit_calib_status->setTextColor(Qt::black);
+        ui->textEdit_calib_status->insertPlainText(QString::asprintf("канал %d:\r\n",c + 1));
+        for(int i = 0 ; i < 14;i++)
+        {
+            if(modes[c][i])
+                {ui->textEdit_calib_status->setTextColor(Qt::darkGreen);}
+            else
+                {ui->textEdit_calib_status->setTextColor(Qt::lightGray);}
 
+            ui->textEdit_calib_status->insertPlainText(txt[i] +"\t");
+        }
+    } */
+    //добавить цветовой градиент от черного к красному
    ui->textEdit_300->setText(dummy.sprintf(
-    "ampl[0]: %.3f\n"
-    "ampl[1]: %.3f\n"
-    "ampl[2]: %.3f\n"
-    "ampl[3]: %.3f\n"
-    "ampl[4]: %.3f\n"
-    "ampl[5]: %.3f\n"
-    "ampl[6]: %.3f\n"
-    "ampl[7]: %.3f\n"
-    "ampl[8]: %.3f\n"
-    "ampl[9]: %.3f\n"
+    " ampl[0]: %.3f\n"
+    " ampl[1]: %.3f\n"
+    " ampl[2]: %.3f\n"
+    " ampl[3]: %.3f\n"
+    " ampl[4]: %.3f\n"
+    " ampl[5]: %.3f\n"
+    " ampl[6]: %.3f\n"
+    " ampl[7]: %.3f\n"
+    " ampl[8]: %.3f\n"
+    " ampl[9]: %.3f\n"
     "ampl[10]: %.3f\n"
     "ampl[11]: %.3f\n"
     "ampl[12]: %.3f\n"
@@ -241,16 +263,16 @@ void MainWindow::updata_data(void)
    ));
 
    ui->textEdit_600->setText(dummy.sprintf(
-    "ampl[0]: %.3f\n"
-    "ampl[1]: %.3f\n"
-    "ampl[2]: %.3f\n"
-    "ampl[3]: %.3f\n"
-    "ampl[4]: %.3f\n"
-    "ampl[5]: %.3f\n"
-    "ampl[6]: %.3f\n"
-    "ampl[7]: %.3f\n"
-    "ampl[8]: %.3f\n"
-    "ampl[9]: %.3f\n"
+    " ampl[0]: %.3f\n"
+    " ampl[1]: %.3f\n"
+    " ampl[2]: %.3f\n"
+    " ampl[3]: %.3f\n"
+    " ampl[4]: %.3f\n"
+    " ampl[5]: %.3f\n"
+    " ampl[6]: %.3f\n"
+    " ampl[7]: %.3f\n"
+    " ampl[8]: %.3f\n"
+    " ampl[9]: %.3f\n"
     "ampl[10]: %.3f\n"
     "ampl[11]: %.3f\n"
     "ampl[12]: %.3f\n"
