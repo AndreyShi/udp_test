@@ -16,6 +16,7 @@ public:
     void track_pwr2();
     void track_pwr3();
     track_data_type data;
+    uint32_t type;
 private:
     ThreadUdp* _udp;
     udp_motor_pack_type tmp_motor;

@@ -4,6 +4,7 @@ Track::Track(ThreadUdp* udp)
 {
     _udp = udp;
     memset(&tmp_motor,0,sizeof(udp_motor_pack_type));
+    type = 0; // type undefined 1 - Ershik, 2- ControlSwitch
 }
 
 void Track::stop()
@@ -56,6 +57,7 @@ void Track::track_pwr3()
 void Track::recieve_data()
 {
     memcpy(&data,&_udp->udp_Pack.data,sizeof(track_data_type));
+    type = _udp->udp_Pack.pac_type;
 }
 
 void Track::poll()
